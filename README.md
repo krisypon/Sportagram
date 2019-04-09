@@ -8,7 +8,7 @@
 # Sāc jau tagad!
 1. Lejupielādē Sportagram aplikāciju no sava android viedtālruņa https://failiem.lv/u/8ndeg9bc
 
-https://github.com/Porfovore/Sportagram/tree/master/atteli
+Sportagram's screenshots: https://github.com/Porfovore/Sportagram/tree/master/atteli
 
 2. Instalē, iespējo tālrunī instalāciju no nezināmiem avotiem
 
