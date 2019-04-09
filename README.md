@@ -8,6 +8,10 @@
 # Sāc jau tagad!
 1. Lejupielādē Sportagram aplikāciju no sava android viedtālruņa https://failiem.lv/u/8ndeg9bc
 
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/download1.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/download2.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/download3.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/download4.jpg)
 
 2. Instalē aplikāciju!
 
@@ -19,25 +23,12 @@
 
 Visual guide on how to use Sportagram app:
 
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/SPORTAGRAMLOGO.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184250.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184259.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184259.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184305.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184624.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184635.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184652.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184707.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184715.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184731.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184736.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184745.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184800.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Sportagram_darbiba.jpg)
-![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Sportagram_strukturshema(4.03.2019).jpg)
-
-
-
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use1.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use2.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use3.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use4.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use5.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/use6.jpg)
 
 # Licence
 ©️ Sportagram
