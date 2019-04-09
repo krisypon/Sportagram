@@ -9,7 +9,9 @@
 1. Lejupielādē Sportagram aplikāciju no sava android viedtālruņa https://failiem.lv/u/8ndeg9bc
 
 
-2. Instalē, iespējo tālrunī instalāciju no nezināmiem avotiem
+2. Instalē aplikāciju!
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/install1.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/install2.jpg)
 
 
 3. Sāc lietot
