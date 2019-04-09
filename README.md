@@ -1,4 +1,4 @@
-# Sportagram 
+# Sportagram ![]()
 - Pirmā Latvijā pieejamā sporta notikumu aplikācija priekš Android!🔥
 - Apskati sev tuvumā sporta cienītāju izveidotus sporta notikumus! ⚽
 - Sniedz savu komentāru pie katra sporta notikuma par savu vēlmi pievienoties! 🏆
