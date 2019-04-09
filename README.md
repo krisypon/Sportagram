@@ -8,14 +8,30 @@
 # Sāc jau tagad!
 1. Lejupielādē Sportagram aplikāciju no sava android viedtālruņa https://failiem.lv/u/8ndeg9bc
 
-Sportagram's screenshots: https://github.com/Porfovore/Sportagram/tree/master/atteli
 
 2. Instalē, iespējo tālrunī instalāciju no nezināmiem avotiem
 
 
 3. Sāc lietot
 
+Visual guide:
+
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/SPORTAGRAMLOGO.jpg)
 ![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184250.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184259.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184259.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184305.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184624.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184635.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184652.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184707.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184715.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184731.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184736.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184745.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184800.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Sportagram_darbiba.jpg)
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Sportagram_strukturshema(4.03.2019).jpg)
 
 
 
