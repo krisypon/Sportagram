@@ -1,0 +1,243 @@
+<html>
+<head>
+    <meta name="viewport" content="[VIEWPORT]"/>
+    <style type="text/css">
+
+[FONT-FACE]
+
+* {
+    max-width:100% !important;
+    word-wrap:break-word;
+    margin-left: 0 !important;
+    margin-right:0 !important;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	background-color:transparent;
+    margin:0;
+    text-overflow: ellipsis;
+    word-wrap:break-word;
+    padding-left:[MARGINLEFT] !important;
+	padding-right:[MARGINRIGHT] !important;
+	padding-top:[MARGINTOP] !important;
+	padding-bottom:[MARGINBOTTOM] !important;
+}
+
+/* Test Pierlo */
+.wp-smiley {
+    display: none;
+}
+
+img,iframe,video{
+    margin-bottom : 10px;
+}
+
+.main {
+	height:auto;
+	padding-top:[PADDINGTOP];
+	padding-bottom:[PADDINGBOTTOM];
+    margin-top:0;
+    margin-bottom:0;    
+    padding-left:[PADDINGLEFT];
+    padding-right:[PADDINGRIGHT];
+    background-color: [BACKGROUNDCOLOR];
+    border: solid;
+    border-width:[BORDER_WIDTH];
+    border-color: [BORDERCOLOR];
+	text-align:justify;   
+}
+
+
+
+h1 {
+	[TITLEFONT]
+}
+
+.date {
+	[SUBTITLEFONT]	
+}
+
+.author {
+	[SUBTITLEFONT]
+}
+
+.content, .content table {
+	[TEXTFONT]
+}
+
+a {
+    color: [LINKCOLOR];
+    font-weight: bold;
+}
+
+.sep {
+    border:1px [SEPARATORSTYLE] [SEPARATORCOLOR];
+}
+
+br.clear {
+    display:none;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+blockquote
+{
+font-style: italic;
+font-family: Georgia, Times, "Times New Roman", serif;
+padding: 2px 0;
+border-style: solid;
+border-color: #ccc;
+border-width: 0;
+[BLOCKQUOTE]
+}
+
+    </style>
+    <script type="text/javascript">
+function fadeIn(id, src, time, maxWidth) {
+	
+    var el = document.getElementById(id);   
+    setImgSrc(el,src);
+        
+    el.style.opacity = '0';
+    //el.style.maxWidth = maxWidth;
+    var iterationNum = 10;
+    var iterationOpacity = 1/iterationNum;
+    var iterationTime = parseInt(parseInt(time)/iterationNum);
+	    fadeInAux(el, iterationTime, iterationNum, 0, iterationOpacity);
+
+        // we keep the id in a dataset for the openPhotoGallery.
+        if (el.id != '') {
+            el.dataset.id = el.id;
+        }
+	    el.id='';// hack for images with same id
+
+    //used to call PhotoGalleryActivity :
+    addListenerOnImg(src);
+}
+function addListenerOnImg(src){
+    //this functions is called when the url of an image is replaced by a local path.
+    //it takes all img present in 'content' and then add an event listener which calls for the GalleryPictureInterface.
+    var contenu = document.getElementsByClassName('content');
+    var images = contenu[0].getElementsByTagName('img');
+    imagesCount = images.length;
+
+    var j = 0;
+    var reg = new RegExp(src, "i");
+	for (var i = 0; i < imagesCount; i++) {
+	    if (!/https?:\/\//i.test(images[i].src)){
+            if (reg.test(images[i].src)){
+
+                (function (j) {
+                      var image = images[i];
+                      var body = document.getElementsByClassName('main');
+                      images[i].addEventListener('click', function (e) {
+                         e.preventDefault();
+                         GalleryPicture.showDetailGalleryImage(image.dataset.id, false, image.offsetTop, image.offsetHeight, image.offsetLeft, (body[0].offsetWidth - image.offsetWidth - image.offsetLeft));
+                      }, false);
+                })(j);
+            }
+        }
+        j++;
+    }
+}
+function setFontSize(size) {
+    var content = document.getElementsByClassName('content')[0];
+    //set content font size
+    content.style.fontSize=size;
+    //search and set textFont in tables
+    var tables = content.getElementsByTagName('table');
+    var tablesCount = tables.length;
+    for (var i = 0; i < tablesCount; i++) {
+        tables[i].style.fontSize=size;
+    }
+    console.log(size+ " " + document.getElementsByClassName('content')[0].style.fontSize);
+}
+function NoClickDelay(el) {
+    this.element = el;
+    if( window.Touch ) this.element.addEventListener('touchstart', this, false);
+}
+function fadeInAux(el, iterationTime, iterationLeft, currentOpacity, iterationOpacity) {
+    if (iterationLeft > 0) {
+        var newOpacity = parseFloat(currentOpacity)+parseFloat(iterationOpacity);
+        setOpacity(el, newOpacity);iterationLeft = parseInt(iterationLeft)-1;
+        setTimeout(function(){ fadeInAux(el, iterationTime, iterationLeft, newOpacity, iterationOpacity); }, iterationTime);
+    }
+}
+function setOpacity (el, value) {
+    el.style.opacity = value;
+}
+function setImgSrc (el, src) {
+    el.src = src;
+    /*  img.onclick = "imageClick(" + id + ")";*/
+}
+function windowResize() {
+    window.resizeTo(320,480);
+}
+function imageClick(id) {
+    document.location = "zoom://" + id;
+}
+NoClickDelay.prototype = {
+handleEvent: function(e) {
+    switch(e.type) {
+        case 'touchstart': this.onTouchStart(e); break;
+        case 'touchmove': this.onTouchMove(e); break;
+        case 'touchend': this.onTouchEnd(e); break;
+    }
+},
+    
+onTouchStart: function(e) {
+    e.preventDefault();
+    this.moved = false;
+    
+    this.element.addEventListener('touchmove', this, false);
+    this.element.addEventListener('touchend', this, false);
+},
+    
+onTouchMove: function(e) {
+    this.moved = true;
+},
+    
+onTouchEnd: function(e) {
+    this.element.removeEventListener('touchmove', this, false);
+    this.element.removeEventListener('touchend', this, false);
+    
+    if( !this.moved ) {
+        /* Place your code here or use the click simulation below */
+        var theTarget = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        if(theTarget.nodeType == 3) theTarget = theTarget.parentNode;
+        
+        var theEvent = document.createEvent('MouseEvents');
+        theEvent.initEvent('click', true, true);
+        theTarget.dispatchEvent(theEvent);
+    }
+}
+};
+
+    </script>
+</head>
+<body>
+<div class="main">
+    [CONTENT]
+</div>
+
+</body>
+</html>
+    

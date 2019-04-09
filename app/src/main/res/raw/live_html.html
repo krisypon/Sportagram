@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta name="viewport" content="[VIEWPORT]"/>
+<style type="text/css">
+
+[FONT-FACE]
+
+* {
+    max-width:100% !important;
+    word-wrap:break-word;
+    margin-left: 0 !important;
+    margin-right:0 !important;
+}
+
+body {
+	background-color:transparent;
+    margin:0;
+    text-overflow: ellipsis;
+    word-wrap:break-word;
+    [TITLEFONT];
+}
+
+img,iframe,video{
+    margin-bottom : 10px;
+}
+
+.main {
+	min-height:100%;
+    margin-top:0;
+    margin-bottom:0;    
+	text-align:center;   
+}
+
+</style>
+<script type="text/javascript">
+function fadeIn(id, src, time, maxWidth) {
+	
+    var el = document.getElementById(id);   
+    setImgSrc(el,src);
+        
+    el.style.opacity = '0';
+    //el.style.maxWidth = maxWidth;
+    var iterationNum = 10;
+    var iterationOpacity = 1/iterationNum;
+    var iterationTime = parseInt(parseInt(time)/iterationNum);
+    fadeInAux(el, iterationTime, iterationNum, 0, iterationOpacity);
+}
+function setFontSize(size) {
+    document.getElementsByClassName('content')[0].style.fontSize=size;
+    console.log(size+ " " + document.getElementsByClassName('content')[0].style.fontSize);
+}
+function NoClickDelay(el) {
+    this.element = el;
+    if( window.Touch ) this.element.addEventListener('touchstart', this, false);
+}
+function fadeInAux(el, iterationTime, iterationLeft, currentOpacity, iterationOpacity) {
+    if (iterationLeft > 0) {
+        var newOpacity = parseFloat(currentOpacity)+parseFloat(iterationOpacity);
+        setOpacity(el, newOpacity);iterationLeft = parseInt(iterationLeft)-1;
+        setTimeout(function(){ fadeInAux(el, iterationTime, iterationLeft, newOpacity, iterationOpacity); }, iterationTime);
+    } else {
+        var oldId=el.id;
+        var oldSrc=el.src;
+        alert(oldId);
+        el.id = '';
+        el=document.getElementById(oldId)
+        if(el) {
+        	alert(el);
+            fadeIn(oldId, oldSrc, 100, 0);
+        }
+    }
+}
+function setOpacity (el, value) {
+    el.style.opacity = value;
+}
+function setImgSrc (el, src) {
+    el.src = src;
+    /*  img.onclick = "imageClick(" + id + ")";*/
+}
+function windowResize() {
+    window.resizeTo(320,480);
+}
+function imageClick(id) {
+    document.location = "zoom://" + id;
+}
+NoClickDelay.prototype = {
+handleEvent: function(e) {
+    switch(e.type) {
+        case 'touchstart': this.onTouchStart(e); break;
+        case 'touchmove': this.onTouchMove(e); break;
+        case 'touchend': this.onTouchEnd(e); break;
+    }
+},
+    
+onTouchStart: function(e) {
+    e.preventDefault();
+    this.moved = false;
+    
+    this.element.addEventListener('touchmove', this, false);
+    this.element.addEventListener('touchend', this, false);
+},
+    
+onTouchMove: function(e) {
+    this.moved = true;
+},
+    
+onTouchEnd: function(e) {
+    this.element.removeEventListener('touchmove', this, false);
+    this.element.removeEventListener('touchend', this, false);
+    
+    if( !this.moved ) {
+        /* Place your code here or use the click simulation below */
+        var theTarget = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        if(theTarget.nodeType == 3) theTarget = theTarget.parentNode;
+        
+        var theEvent = document.createEvent('MouseEvents');
+        theEvent.initEvent('click', true, true);
+        theTarget.dispatchEvent(theEvent);
+    }
+}
+};
+</script>
+</head>
+<body>
+<div class="main">
+[CONTENT]
+</div>
+
+</body>
+</html>
+    
