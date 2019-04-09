@@ -14,7 +14,7 @@
 
 3. Sāc lietot
 
-Visual guide:
+Visual guide on how to use Sportagram app:
 
 ![](https://github.com/Porfovore/Sportagram/blob/master/atteli/SPORTAGRAMLOGO.jpg)
 ![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184250.jpg)
