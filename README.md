@@ -15,6 +15,8 @@ Sportagram's screenshots: https://github.com/Porfovore/Sportagram/tree/master/at
 
 3. Sāc lietot
 
+![](https://github.com/Porfovore/Sportagram/blob/master/atteli/Screenshot_20190409-184250.jpg)
+
 
 
 
