@@ -5,3 +5,13 @@
 - Kā arī meklē sev sporta biedrus izveidojot mūsu aplikācijā sporta notikumu sazinoties ar mums pa sportagram@inbox.lv 📧
 
 
+# Sāc jau tagad!
+1. Lejupielādē Sportagram aplikāciju no sava android viedtālruņa https://failiem.lv/u/8ndeg9bc
+2. Instalē, iespējo tālrunī instalāciju no nezināmiem avotiem
+3. Sāc lietot
+
+
+
+
+# Licence
+©️ Sportagram
