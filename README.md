@@ -10,6 +10,7 @@
 
 
 2. Instalē aplikāciju!
+
 ![](https://github.com/Porfovore/Sportagram/blob/master/atteli/install1.jpg)
 ![](https://github.com/Porfovore/Sportagram/blob/master/atteli/install2.jpg)
 
